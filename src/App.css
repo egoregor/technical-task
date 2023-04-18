@@ -1,0 +1,162 @@
+body {
+    background: url('./assets/bg.png'), #101F25;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    font-size: 16px;
+}
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: rgba(12,13,15,0.3);
+    padding-bottom: 64px;
+}
+.commentsContainer {
+    max-width: 560px;
+    padding: 0 24px;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.commentsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #767676;
+    width: 100%;
+}
+.totalCommentsLikes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.totalCommentsLikes img {margin-right: 8px;}
+
+.likeImg {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.likeImgTotal {
+    opacity: 0.4;
+}
+
+.commentsList {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+}
+.subComment {padding-left: 34px;}
+.commentHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.commentAvatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+.commentLike {
+    margin-left: auto;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.commentLike img {margin-right: 8px;}
+.commentNick {
+    font-weight: bold;
+}
+.commentTime {
+    color: #8297AB;
+}
+.commentText {
+    padding-left: 88px;
+}
+
+.btnMore {
+    background: #313439;
+    width: 234px;
+    height: 36px;
+    border: none;
+    color: white;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.loader {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+.loader:after {
+    content: " ";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loaderAnim 1.2s linear infinite;
+}
+@keyframes loaderAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    position: fixed;
+    top: -32px;
+    left: 50%;
+    margin-left: -95px;
+    background: #b71c1c;
+    padding: 5px 15px;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.2s;
+}
+.errorShow {
+    top: 0;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+    .app {padding-bottom: 76px;}
+    .commentsContainer {margin-top: 32px;}
+    .totalCommentsLikes {font-size: 14px;}
+    .commentLike {font-size: 14px;}
+
+    .commentsList {
+        padding-top: 24px;
+        grid-gap: 24px;
+    }
+    .commentAvatar {
+        width: 40px;
+        height: 40px;
+    }
+    .commentText {padding-left: 60px; margin-top: 8p;}
+    .btnMore {margin-top: 40px;}
+}
